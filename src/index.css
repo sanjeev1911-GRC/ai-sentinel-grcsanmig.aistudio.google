@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Core Palette */
+  --color-bg: #131315;
+  --color-surface-low: #1B1B1D;
+  --color-surface-high: #2A2A2C;
+  --color-surface-highest: #353437;
+  --color-surface-lowest: #0E0E10;
+  
+  /* Accents */
+  --color-primary: #AAC7FF;
+  --color-primary-container: #3E90FF;
+  --color-tertiary: #47E266;
+  --color-error: #FFB4AB;
+  
+  /* Text & Elements */
+  --color-on-surface: #E4E2E4;
+  --color-on-primary-fixed: #001B3E;
+  --color-outline-variant: #414755;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities based on spec */
+.text-display-lg {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+
+.text-display-md {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+
+.text-headline-lg {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.text-body-md {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.text-label-md {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Ghost Border Utility */
+.ghost-border {
+  border: 1px solid color-mix(in srgb, var(--color-outline-variant) 15%, transparent);
+}
+
+/* Ambient Shadow Utility */
+.ambient-shadow {
+  box-shadow: 0 24px 40px -4px color-mix(in srgb, var(--color-on-primary-fixed) 10%, transparent);
+}
+
+/* Markdown Styles */
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--color-on-surface);
+}
+.markdown-body h1 { font-size: 1.5em; }
+.markdown-body h2 { font-size: 1.25em; }
+.markdown-body h3 { font-size: 1.125em; }
+.markdown-body p { margin-bottom: 1em; line-height: 1.6; }
+.markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+.markdown-body ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 1em; }
+.markdown-body li { margin-bottom: 0.25em; }
+.markdown-body strong { font-weight: 600; color: var(--color-primary); }
